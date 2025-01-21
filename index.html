@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>
+    Sammi Browser Websocket Example
+</h1>
+<p>
+    Execute the command in SAMMI to have the data show up here
+</p>
+<div id="data-goes-here">
+    <i>
+        This is where I would put my data IF I HAD IT.
+    </i>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/obs-websocket-js"></script>
+<script>
+    (function () {
+        const obs = new OBSWebSocket();
+        const divToWriteTo = document.getElementById('data-goes-here');
+
+        async function ConnectToOBS() {
+            try {
+                //Connection Attempt
+                // todo get these from query parameters
+                const urlParams = new URLSearchParams(window.location.search);
+                const wsPort = urlParams.get('wsPort') || '4455';
+                const wsPassword = urlParams.get('wsPassword') || '';
+                await obs.connect(`ws://localhost:${wsPort}`, wsPassword);
+                console.log("Connected to OBS!");
+
+                //On Incoming Custom Event
+                obs.on("CustomEvent", e => {
+                    console.log(JSON.stringify(e));
+                    // you can have any number of events you want, just specify them in sammi.
+                    if (e.event == "myCustomEvent") {
+                        divToWriteTo.innerHTML = JSON.stringify(e);
+                    }
+                });
+                //On disconnect event
+                obs.on("ConnectionClosed", (data) => {
+                    console.log(`Disconnected from OBS!`);
+                });
+            } catch (error) {
+                console.log(`${error}`);
+            }
+        }
+
+        ConnectToOBS();
+    }());
+</script>
+</body>
+</html>

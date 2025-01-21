@@ -1,0 +1,16 @@
+[extension_name]
+Sammi Browser Websocket Example
+[extension_info]
+This is an example of sammi sending arbitrary data to a webpage that is hosted inside of OBS.
+[extension_version]
+1.0.0
+[insert_external]
+
+[insert_command]
+
+[insert_hook]
+
+[insert_script]
+
+[insert_over]
+{ "deck_data": "{ \"background_color\": 4210752.0, \"on\": true, \"grid_y\": 4.0, \"snap_grid\": true, \"lb_version\": \"2024.4.0\", \"background_image\": \"\", \"sammi_version\": \"2024.4.0\", \"adaptive_resizing\": true, \"unique_id\": \"20250121165637932217410\", \"button_list\": [ { \"color\": 49238.0, \"persistent\": true, \"text\": \"Create Scene\", \"release_duration\": 0.0, \"queueable\": false, \"command_list\": [ { \"b1\": \"=\", \"cmd\": 15.0, \"obsid\": \"Main\", \"pos\": 0.0, \"vis\": true, \"ms\": 0.0, \"sel\": false, \"dis\": false, \"xpan\": 0.0, \"b0\": \"wsPort\", \"b2\": \"4455\" }, { \"b1\": \"=\", \"cmd\": 15.0, \"obsid\": \"Main\", \"pos\": 1.0, \"vis\": true, \"ms\": 0.0, \"sel\": false, \"dis\": false, \"xpan\": 0.0, \"b0\": \"wsPassword\", \"b2\": \"'PasswordGoesHere'\" }, { \"cmd\": 50.0, \"obsid\": \"Main\", \"pos\": 2.0, \"vis\": true, \"ms\": 0.0, \"sel\": false, \"dis\": false, \"xpan\": 0.0, \"b0\": \"Sammi Browser Websocket Example\" }, { \"b1\": \"browser_source\", \"b3\": \"{\\\"url\\\": \\\"\\\"}\", \"cmd\": 47.0, \"obsid\": \"Main\", \"pos\": 3.0, \"vis\": true, \"ms\": 1000.0, \"sel\": false, \"dis\": false, \"xpan\": 0.0, \"b0\": \"WebsocketBrowser\", \"b2\": \"Sammi Browser Websocket Example\", \"v0\": 0.0 } ], \"press_type\": 0.0, \"x\": 0.0, \"is_transparent\": false, \"border\": 2.0, \"image\": \"\", \"triggers\": [ ], \"group_id\": \"\", \"overlappable\": false, \"init_variable\": \"\", \"deck\": 1.0, \"width\": 0.5, \"button_id\": \"sbwe-create-scene\", \"button_duration\": 1000.0, \"y\": 0.0, \"switch_deck\": \"\", \"height\": 0.5, \"release_list\": [ ], \"functions\": 65.0, \"stretch\": false }, { \"color\": 6930550.0, \"persistent\": true, \"text\": \"Send \\nEvent\", \"release_duration\": 0.0, \"queueable\": false, \"command_list\": [ { \"b1\": \"\", \"cmd\": 65.0, \"obsid\": \"Main\", \"pos\": 0.0, \"vis\": true, \"ms\": 0.0, \"sel\": false, \"dis\": false, \"xpan\": 369.0, \"b0\": \"{\\\"op\\\":6,\\\"d\\\":{\\n\\n\\\"requestType\\\":\\\"BroadcastCustomEvent\\\",\\n\\n\\\"requestData\\\":{\\n  \\\"eventData\\\": {\\n    \\\"event\\\": \\\"myCustomEvent\\\",\\n    \\\"arbitraryData\\\"\\n  }\\n}\\n}\\n}\", \"b2\": \"\" } ], \"press_type\": 0.0, \"x\": 0.5, \"is_transparent\": false, \"border\": 2.0, \"image\": \"\", \"triggers\": [ ], \"group_id\": \"\", \"overlappable\": false, \"init_variable\": \"\", \"deck\": 1.0, \"width\": 0.5, \"button_id\": \"sbwe-send-event\", \"button_duration\": 0.0, \"y\": 0.0, \"switch_deck\": \"\", \"height\": 0.5, \"release_list\": [ ], \"functions\": 65.0, \"stretch\": false } ], \"deck_name\": \"SAMMI Browser Websocket Example\", \"grid_x\": 4.0, \"stretch\": false }", "unique_id": "20250121165637932217410", "include_image": { } }
