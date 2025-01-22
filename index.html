@@ -36,7 +36,7 @@
                 obs.on("CustomEvent", e => {
                     console.log(JSON.stringify(e));
                     // you can have any number of events you want, just specify them in sammi.
-                    if (e.event == "myCustomEvent") {
+                    if (e.event === "myCustomEvent") {
                         divToWriteTo.innerHTML = JSON.stringify(e);
                     }
                 });
