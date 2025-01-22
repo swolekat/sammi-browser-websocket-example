@@ -26,7 +26,6 @@
         async function ConnectToOBS() {
             try {
                 //Connection Attempt
-                // todo get these from query parameters
                 const urlParams = new URLSearchParams(window.location.search);
                 const wsPort = urlParams.get('wsPort') || '4455';
                 const wsPassword = urlParams.get('wsPassword') || '';
